@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Link, NavLink } from "react-router-dom";
 import "normalize.css/normalize.css";
-import "../src/styles/styles/styles.scss";
+import "../src/styles/styles.scss";
 
 const ExpenseDashboardPage = () => (
   <div>This is the Expense Dashboard Page!</div>
