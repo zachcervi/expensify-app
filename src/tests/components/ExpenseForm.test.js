@@ -14,7 +14,7 @@ test("should render ExpenseForm correctly with expense data", () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-test("Should render error for invalid form submission", () => {
+test("should render error for invalid form submission", () => {
   const wrapper = shallow(<ExpenseForm />);
   expect(wrapper).toMatchSnapshot();
   wrapper.find("form").simulate("submit", {
@@ -25,7 +25,7 @@ test("Should render error for invalid form submission", () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-test("Should set description on input change", () => {
+test("should set description on input change", () => {
   const value = "New Description";
   const wrapper = shallow(<ExpenseForm />);
   wrapper.find("input").at(0).simulate("change", {
@@ -34,7 +34,7 @@ test("Should set description on input change", () => {
   expect(wrapper.state("description")).toBe(value);
 });
 
-test("Should set note on textarea change", () => {
+test("should set note on textarea change", () => {
   const value = "New Note";
   const wrapper = shallow(<ExpenseForm />);
   wrapper.find("textarea").simulate("change", {
@@ -61,7 +61,7 @@ test("should not set amount if invalid input", () => {
   expect(wrapper.state("amount")).toBe("");
 });
 
-test("Should call onSubmit prop for valid form submission", () => {
+test("should call onSubmit prop for valid form submission", () => {
   const onSubmitSpy = jest.fn();
   const wrapper = shallow(
     <ExpenseForm expense={expenses[0]} onSubmit={onSubmitSpy} />
@@ -85,7 +85,7 @@ test("should set new date on date change", () => {
   expect(wrapper.state("createdAt")).toEqual(now);
 });
 
-test("Should set calendar focus on change", () => {
+test("should set calendar focus on change", () => {
     const wrapper = shallow(<ExpenseForm />)
     const didChange = true
     wrapper.find("SingleDatePicker").prop("onFocusChange")({focused: didChange});
