@@ -4,6 +4,9 @@ import { connect } from "react-redux";
 import { addExpense } from "../actions/expenses";
 
 export class AddExpensePage extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   onSubmit = (expense) => {
     this.props.addExpense(expense);
     this.props.history.push("/");
